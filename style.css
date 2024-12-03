@@ -1,0 +1,78 @@
+
+/* Basic Reset */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background: linear-gradient(135deg, #a0c4ff, #c3aed6);
+font-family: 'Arial', sans-serif;
+color: white;
+}
+
+/* Clock Container */
+.clock-container {
+text-align: center;
+padding: 20px;
+background-color: rgba(0, 0, 0, 0.7);
+border-radius: 15px;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Clock Styling */
+.clock {
+font-size: 5rem;
+letter-spacing: 5px;
+font-weight: bold;
+text-transform: uppercase;
+}
+
+/* Styling for each digit */
+.digit {
+color: #fff;
+animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* Styling for the separators */
+.separator {
+color: #ff8c00;
+animation: pulse 1.5s infinite ease-in-out;
+opacity: 0.6;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+0% {
+text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff;
+}
+50% {
+text-shadow: 0 0 10px #ff8c00, 0 0 20px #ff8c00, 0 0 30px #ff8c00;
+}
+100% {
+text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff;
+}
+}
+
+/* Optional: Adding a smooth glow effect on the entire clock */
+.clock {
+animation: glow 1.5s ease-in-out infinite;
+}
+
+@keyframes glow {
+0% {
+text-shadow: 0 0 10px #ff8c00, 0 0 15px #ff8c00, 0 0 30px #ff8c00;
+}
+50% {
+text-shadow: 0 0 20px #ff8c00, 0 0 25px #ff8c00, 0 0 50px #ff8c00;
+}
+100% {
+text-shadow: 0 0 10px #ff8c00, 0 0 15px #ff8c00, 0 0 30px #ff8c00;
+}
+}
